@@ -23,7 +23,7 @@ const Board = () => {
     const _tempDisplay = { ...display, [name]: value };
     localStorage.setItem(BOARD_VIEW_STATE_KEY, JSON.stringify(_tempDisplay));
     setDisplay(_tempDisplay);
-  }, []);
+  }, [display]);
   const usersMap = useMemo(() => {
     return boardData?.users?.length > 0
       ? getMapByKey("id", boardData?.users)
